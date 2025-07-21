@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "48af8cf1-95c1-4b6c-aa56-f75740c8ddb7",
+		"name": "Maybank Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1416871"
+	},
+	"item": [
+		{
+			"name": "SignUp & Login",
+			"item": [
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"jannah\",\r\n    \"lastName\": \"Gaber\",\r\n    \"email\": \"jannah@gmail.com\",\r\n    \"password\": \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"jannah@gmail.com\",\r\n    \"password\":\"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Email Verification",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"Gaber\",\r\n    \"email\": \"shamsagel@gmail.com\",\r\n    \"password\": \"shamsan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/email-verification?token=eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJGZ3RpVVhUUTJUamxGSTR5Vlk3YXE4aUdMdk5Pem9oRWZRY2IydFNzWW1Jd1QzU05XUiIsImV4cCI6MTc1Mzc4MTc5M30.BhotApY3q8pCg6_ctgqSybewU7LZgz2oZOuox0ZtSuPzLcxB4Wdza0Ge_lDG1tmnCSXdutQS0jdqmiThV2bXOQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"email-verification"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJGZ3RpVVhUUTJUamxGSTR5Vlk3YXE4aUdMdk5Pem9oRWZRY2IydFNzWW1Jd1QzU05XUiIsImV4cCI6MTc1Mzc4MTc5M30.BhotApY3q8pCg6_ctgqSybewU7LZgz2oZOuox0ZtSuPzLcxB4Wdza0Ge_lDG1tmnCSXdutQS0jdqmiThV2bXOQ"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Info",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW5uYWhAZ21haWwuY29tIiwiZXhwIjoxNzUzNzgyODc2fQ.Xgs2KNe-Wo28W3sEqFkJru5gvwO_n0iMd-pwz4R4plHSmIRL7sRAbUXjqxYP3bJjHcrk8uy8MAmRbSHIcbUvKQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"Gaber\",\r\n    \"email\": \"shamsagel@gmail.com\",\r\n    \"password\": \"shamsan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/FgtiUXTQ2TjlFI4yVY7aq8iGLvNOzohEfQcb2tSsYmIwT3SNWR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"FgtiUXTQ2TjlFI4yVY7aq8iGLvNOzohEfQcb2tSsYmIwT3SNWR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import Data To DB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"Gaber\",\r\n    \"email\": \"shamsagel@gmail.com\",\r\n    \"password\": \"shamsan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jobs/importTrxHistory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"importTrxHistory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
